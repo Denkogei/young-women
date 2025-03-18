@@ -40,10 +40,18 @@ function Footer() {
             {/* Social Media */}
             <h3 className="text-lg font-semibold mt-4">Engage with us on social media</h3>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-white text-xl hover:text-gray-300"><FaFacebookF /></a>
-              <a href="#" className="text-white text-xl hover:text-gray-300"><FaTwitter /></a>
-              <a href="#" className="text-white text-xl hover:text-gray-300"><FaLinkedinIn /></a>
-              <a href="#" className="text-white text-xl hover:text-gray-300"><FaYoutube /></a>
+              <a href="https://www.facebook.com/IPHRDAFRICA" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:text-gray-300">
+                <FaFacebookF />
+              </a>
+              <a href="https://twitter.com/iphrdafrica" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:text-gray-300">
+                <FaTwitter />
+              </a>
+              <a href="https://www.linkedin.com/company/international-centre-for-peace-human-rights-and-development-iphrd-africa/" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:text-gray-300">
+                <FaLinkedinIn />
+              </a>
+              <a href="https://www.youtube.com/@iphrd-africa5293" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:text-gray-300">
+                <FaYoutube />
+              </a>
             </div>
           </div>
         </div>
