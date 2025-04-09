@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Section */}
           <div>
-            <img src="/src/assets/iphrd.png" alt="IPHRD Africa" className="w-36 mb-4" />
+            <img src="/public/iphrd1.png" alt="IPHRD Africa" className="w-36 mb-4" />
             <p className="text-sm leading-6">
               IPHRD-Africa is a non-profit, non-partisan NGO registered in Kenya with local, 
               national, and international status. Our mission is to promote a human rights 
@@ -34,7 +34,7 @@ function Footer() {
               <span className="font-semibold">Physical Address:</span> Kindaruma Road, Kindaruma apartments, Hs. No 13A
             </p>
             <p className="text-sm">📬 P.O BOX 18829 – 00100 Nairobi</p>
-            <p className="text-sm">📧 info@iphrdafrica.org</p>
+            <p className="text-sm">📧 ywmn@iphrdafrica.org</p>
             <p className="text-sm">📞 +254 759-862-938</p>
 
             {/* Social Media */}
@@ -58,8 +58,16 @@ function Footer() {
 
         {/* Bottom Section */}
         <div className="text-center text-sm mt-10 border-t border-gray-500 pt-4">
-          Copyright © 2025 IPHRD AFRICA. All rights reserved.
-        </div>
+          Copyright © 2025 IPHRD AFRICA. All rights reserved. Made with ❤️ by
+          <a 
+            href="https://www.linkedin.com/in/dennis-kemboi/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white-500 hover:underline ml-1"
+          >
+            Dennis Kemboi
+          </a>
+      </div>
       </div>
     </footer>
   );

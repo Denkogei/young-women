@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 import img1 from "../assets/1.jpeg";
 import img2 from "../assets/2.jpeg";
 import img3 from "../assets/3.jpeg";
@@ -55,22 +56,20 @@ function Home() {
         </div>
       </div>
 
-      {/* About Section */}
-      <div className="py-10 px-6 md:px-12 max-w-5xl mx-auto text-center">
-        <h2 className="text-lg md:text-2xl font-bold text-[#2B256E] leading-tight">
+      {/* Introduction Section */}
+      <div className="p-6 md:p-8 max-w-5xl mx-auto mt-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4 text-center">
           About the Young Women Mediation Network
         </h2>
-        <div className="mt-6 space-y-4 text-gray-800 text-sm md:text-base leading-relaxed">
-          <p>
-            Founded in 2017 by young women at IPHRD-Africa, the Network equips women with skills in peacebuilding, mediation, and conflict resolution. It advances UNSCR 1325, 2250, and 2419 on Women, Peace, and Security.
-          </p>
-          <p>
-            Despite these resolutions, women remain underrepresented due to systemic barriers. The Network fosters change by training mediators, advocating for policy reforms, and amplifying women’s voices in peace efforts.
-          </p>
-          <p>
-            Through mentorship, workshops, grassroots initiatives, and strategic partnerships, the Network strengthens women’s role in mediation and drives lasting social change.
-          </p>
-        </div>
+        <p className="text-gray-900 leading-relaxed text-sm md:text-lg">
+          Founded in 2017 by young women at IPHRD-Africa, the Network equips women with skills in peacebuilding, mediation, and conflict resolution. It advances UNSCR 1325, 2250, and 2419 on Women, Peace, and Security.
+        </p>
+        <p className="text-gray-900 leading-relaxed text-sm md:text-lg mt-4">
+          Despite these resolutions, women remain underrepresented due to systemic barriers. The Network fosters change by training mediators, advocating for policy reforms, and amplifying women’s voices in peace efforts.
+        </p>
+        <p className="text-gray-900 leading-relaxed text-sm md:text-lg mt-4">
+          Through mentorship, workshops, grassroots initiatives, and strategic partnerships, the Network strengthens women’s role in mediation and drives lasting social change.
+        </p>
       </div>
     </div>
   );
