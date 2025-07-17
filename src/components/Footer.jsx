@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import iphrdLogo from '../assets/iphrd1.png';
+
 
 function Footer() {
   return (
@@ -8,7 +10,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Section */}
           <div>
-            <img src="/public/iphrd1.png" alt="IPHRD Africa" className="w-36 mb-4" />
+            <img src={iphrdLogo} alt="IPHRD Africa" className="w-36 mb-4" />
             <p className="text-sm leading-6">
               IPHRD-Africa is a non-profit, non-partisan NGO registered in Kenya with local, 
               national, and international status. Our mission is to promote a human rights 
@@ -31,10 +33,10 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-3">Get In Touch</h3>
             <p className="text-sm">
-              <span className="font-semibold">Physical Address:</span> Kindaruma Road, Kindaruma apartments, Hs. No 13A
+              <span className="font-semibold">Physical Address:</span> Elysee plaza,3rd floor, Kilimani Road 
             </p>
             <p className="text-sm">📬 P.O BOX 18829 – 00100 Nairobi</p>
-            <p className="text-sm">📧 ywmn@iphrdafrica.org</p>
+            <p className="text-sm">📧  iphrdcommunications@gmail.com</p>
             <p className="text-sm">📞 +254 759-862-938</p>
 
             {/* Social Media */}

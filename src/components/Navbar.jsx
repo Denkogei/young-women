@@ -24,8 +24,9 @@ const Navbar = () => {
             <Link to="/initiatives" className="text-[#2B256E] hover:text-[#88C641]">Initiatives</Link>
             <Link to="/about" className="text-[#2B256E] hover:text-[#88C641]">About Us</Link>
             <Link to="/members" className="text-[#2B256E] hover:text-[#88C641]">Members</Link>
+            <Link to="/news" className="text-[#2B256E] hover:text-[#88C641]">News</Link>
             <Link to="/contact" className="text-[#2B256E] hover:text-[#88C641]">Contacts Us</Link>
-            <Link to="/complains" className="text-[#2B256E] hover:text-[#88C641]">Complains</Link>
+            <Link to="/complaints" className="text-[#2B256E] hover:text-[#88C641]">Complaints</Link>
             <Link 
               to="/donations"
               className="bg-[#88C641] text-white px-4 py-2 rounded-md hover:bg-[#2B256E] transition"
@@ -51,8 +52,9 @@ const Navbar = () => {
             <Link to="/initiatives" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>Initiatives</Link>
             <Link to="/about" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>About Us</Link>
             <Link to="/members" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>Members</Link>
+            <Link to="/news" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>News</Link>
             <Link to="/contact" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>Contacts Us</Link>
-            <Link to="/complains" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>Complains</Link>
+            <Link to="/complaints" className="text-[#2B256E] hover:text-[#88C641]" onClick={() => setIsOpen(false)}>Complaints</Link>
             <Link 
               to="/donations"
               className="bg-[#88C641] text-white px-4 py-2 rounded-md hover:bg-[#2B256E] transition text-center"

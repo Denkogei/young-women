@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 
 import Irene from '../assets/irene-wanjiku.png';
 import Lidya from '../assets/lidya-getahun.jpeg';
@@ -20,12 +22,13 @@ import Francesca from '../assets/francesca.png';
 import Mercy from '../assets/mercy-jerop-sirgoi.png';
 import Nasra from '../assets/nasra.png';
 import Hellen from '../assets/Hellen.jpeg';
-
+import Jacky from '../assets/jacky.jpeg';
+import Ongoli from '../assets/ongoli.jpeg';
 
 const membersData = [
   {
     name: "Irene Wanjiku Kirumba",
-    position: "Programmes Officer",
+    position: "",
     phone: "+254 720247 718",
     email: "wanjikukirumba89@gmail.com",
     address: "Kiambu, Kenya",
@@ -82,15 +85,6 @@ Linda is a Young Women Mediation Ambassador Kenya having been at the forefront o
     image: Wendy,
     profile: `Highly skilled and professional development program leader with over 6 years multifaceted experience in providing training and leadership in the development, articulation & implementation of youth and Women empowerment programs on education, governance and Sexual and reproductive health. Certified trainer by the Clingendael Institute, Netherlands and trained mentor of youths. Alumni of the American Express Leadership Academy and Global Youth Ambassador of Theirworld. Holds a Bachelor of Commerce from the University of Nairobi and Diplôme D'Etudes En L'angue Française DELF A2 from Alliance Française.  
               Wendy is a Rise Up Leader 2024 and Speaker and moderator of various youth forums and media platforms. Has won accolades including the National Diversity and Inclusion Awards Youth in Leadership category; Top 25 Most Influential Female Student Leaders 2019 and Open Source Leader 2019 by Common Purpose. Executive Director of Young Women Leaders Connect, YWLC, a youth led organization that aims at socio- economic and political empowerment of the Young people. Sits at the board of the Hope for Kenya Slum Adolescents Initiative HKSAI and Legal Sister and serves as the Vice President- East Africa of the Pan African Female Youth Leaders PANAFYL where she fiercely champions for gender equality in Africa. Her story has been published on The People’s Daily Magazine; premier issue of We Are Magazine; LeaderStories (global storytelling platform for young leaders); podcast LeaderVoices (a production of The American Express Leadership Academy alumni network) and Nairobi News. Has vast experience in mentorship, events management, graphic designing and moderation.`
-  },
-  {
-    name: "Rachel Hakim Edward",
-    position: "CEO",
-    phone: "+211 920 285046",
-    email: "rachelmundua@gmail.com",
-    address: "Hai Mouna, Juba, South Sudan",
-    image: Rachel,
-    profile: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl suscipit malesuada id a justo. Donec suscipit egestas tortor.`
   },
   {
     name: "Berlinda Woelinam Azumah",
@@ -210,24 +204,7 @@ Fartun Ibrahim's diverse work as a Career Development Advisor at the City Univer
 Fartun Ibrahim holds a Bachelor of Social Work from City University Mogadishu, showcasing their dedication to understanding social issues and human behavior. Additionally, they possess a Bachelor of Science in Accounting from SIMAD University, reflecting a multidisciplinary approach to addressing social and economic challenges. Their academic achievements underscore a commitment to lifelong learning, preparing them to contribute meaningfully to their field Top of Form. 
 Overall, Fartun Ibrahim is a dedicated professional with a strong commitment to social justice and community empowerment. Their diverse background, coupled with their passion for helping others, positions them as a valuable asset in any organization striving to make a positive impact on society.`
   },
-  {
-    name: "Yelyzaveta Glybchenko",
-    position: "Artist",
-    phone: "+252 618 900977",
-    email: "glybchenko.liza@gmail.com",
-    address: "Tampere, Finland",
-    image: Yelyzaveta,
-    profile: "Yelyzaveta Glybchenko is a creative artist based in Tampere, Finland. [Add more details about her artistic style, notable works, exhibitions, or projects if available.]"
-  },
-  {
-    name: "Francesca Caruso",
-    position: "Analyst",
-    phone: "+252 618 900977",
-    email: "fr.caruso1@gmail.com",
-    address: "Via Galvani, Rome",
-    image: Francesca,
-    profile: "Francesca Caruso is an experienced analyst based in Rome, Italy. [Add more details about her expertise, industries she works in, and key projects if available.]"
-  },
+
   {
     name: "Mercy Jerop Sirgoi",
     position: "Graduate Student",
@@ -252,17 +229,30 @@ Overall, Fartun Ibrahim is a dedicated professional with a strong commitment to 
     Born and raised in Erigavo, Nasra is deeply rooted in her community. Her passion for economic development, peacebuilding, and human rights protection drives her dedication to making a positive impact. Beyond her professional pursuits, Nasra enjoys sports, reading, and volunteering with local organizations to promote social and economic development.`
   },
   {
-    name: " Helen Tamrat",
-    position: "Project Manager",
-    phone: "N/A",
-    email: "N/A",
-    address: "N/A",
-    image: Hellen,
-    profile: `I'm Helen Tamrat, currently working with Amhara Bank in Digital Banking. I hold two degrees: one in Accounting and Finance from Hawassa University and another in Public Health from Pharma College. Professionally, I'm dedicated to promoting gender equality and peacebuilding efforts. I have actively volunteered with DefyHateNow Ethiopia, focusing on addressing Gender-Based Violence (GBV). My mission is to engage in activities related to gender and peace to become an expert and create meaningful change within the community.
-     I'm passionate about gender issues, volunteering, and making a positive impact through peacebuilding initiatives. I am currently seeking opportunities to expand my involvement and deepen my expertise in these areas.`
+    name: "Janet Nandwa Ongoli",
+    position: "",
+    email: "janetongoli@gmail.com | activecitizeninitiativeafrica@gmail.com",
+    linkedin: "https://www.linkedin.com/in/janet-nandwa-ongoli",
+    twitter: "@janommoja",
+    address: " Baringo County, Kenya",
+    image: Ongoli,
+    profile: `Janet Nandwa Ongoli is a peace and governance practitioner and the founder of Active Citizen Initiative – Africa (ACIA), a grassroots-based organization advancing inclusive civic engagement, social justice, and community-led development. Her work strongly emphasizes gender equality, the empowerment of women, youth, and persons with disabilities (PWDs), as well as public accountability. Janet is a Certified Professional Mediator and participanted in the Intergenerational Forum on Mediation for Young Women organized by IPHRD-Africa. Her work spans both county and national processes, with a focus on peacebuilding in fragile and conflict-affected areas, particularly in Baringo County. She currently serves in the Secretariat of the Baringo County Multisectoral Coordination and Collaboration Forum on Peace and Security, where she plays a key role in consolidating community issues, facilitating stakeholder engagement, and developing joint workplans to promote durable peace. As a woman peace actor, Janet actively engages in community peace deliberations, inter-ethnic dialogues, and peacebuilding efforts during election periods. She leverages her advocacy platforms to amplify peace messaging and promote civic accountability. She is a member of: Baringo CSO Forum (BACSOF) – serving as Communication Officer IEP Positive Peace Network – advocating for sustainable peace using community-based indicators Janet is passionate about fostering a peace-literate generation of young women and girls who can mediate, lead, and rebuild their communities with resilience and purpose.`
+  },
+  {
+    name: " Jacky",
+    position: "",
+    phone: "+211 922 673 404",
+    email: "jackyben682@gmail.com",
+    address: "South Sudan",
+    image: Jacky,
+    profile: `Jacky is a south Sudanese feminist who is passionate about politics, women's and girl's, Gender and Social Justice, Peace and Security.  She is a First class Graduate from the Catholic university of South Sudan, affiliate of Catholic university of Eastern Africa_Nairobi Kenya,  where she got the 2023 award, Jacky pursued a Bachelor's degree in Peace and Conflict studies. She worked with Ma' Mara Sakit village,  as a Gender Talk 211#  Radio Host from 2020 to 2022 and currently works as the Programs  Coordinator, where she oversees all the Programs and still serves as a Co_host, these programs enables her to amplify the voices of South Sudanese women and girls on the issues of inequalities that affects them. Through her efforts, Ms Jacky is advancing strategies that foster positive societal change for a common good. Additionally, she co-curates and hosts radio discussions on critical issues such as the denial of girls child education, forced and arranged marriages, maternal healthcare, bride price practices, women's rights and ownership of resources.Jacky is a dedicated feminist who has been supporting refugees women and girls from 2023 to 2024 in Yumbe District Uganda, at Bidibidi Refugee Settlement, this program has allowed her to organized a cross -cultural dialogue between the young and old women hence bridging the inter-generational gap, the program brought together South Sudanese, Ugandan and Congolese women and girls together. Jacky also shared her expertise as a Teaching Assistant at Catholic university of South Sudan, at the Institute for Peace and Justice,  where she lectures on the Principles and Approaches of Nonviolence . Ms Jacky is an alumna of the Young African Leadership Initiative (YALI) where she was able to network with African youths from 14 Africans countries She is a member of the Young women Mediation Network, a platform for young women mediators under IPHRD -Africa where she is coordinating the South Sudan Chapter. 
+`
   }
   
 ];
+
+
+
 
 function Members() {
   return (
@@ -283,37 +273,116 @@ function Members() {
 function MemberCard({ member }) {
     const [showFullProfile, setShowFullProfile] = useState(false);
     const shortProfile = member.profile.substring(0, 307) + "...";
-  
+    
+    // Split emails if they contain a pipe character
+    const emails = member.email.includes('|') 
+        ? member.email.split('|').map(e => e.trim())
+        : [member.email];
+
     return (
-      <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-300">
-        <div className="flex flex-col items-center text-center">
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
-          />
-          <h2 className="text-lg font-bold mt-3 text-[#2B256E]">{member.name}</h2>
-          <p className="text-sm text-gray-600 mt-1 font-semibold">{member.position}</p>
+        <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-300 hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col items-center text-center">
+                <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full object-cover border-2 border-gray-300"
+                />
+                <h2 className="text-lg font-bold mt-3 text-[#2B256E]">{member.name}</h2>
+                {member.position && (
+                    <p className="text-sm text-gray-600 mt-1 font-semibold">{member.position}</p>
+                )}
+            </div>
+
+            <div className="mt-4 space-y-3 text-gray-700 text-sm">
+                {member.phone && (
+                    <div className="flex items-start gap-2">
+                        <HiPhone className="w-4 h-4 mt-0.5 text-gray-600" />
+                        <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className="hover:underline">
+                            {member.phone}
+                        </a>
+                    </div>
+                )}
+                
+                <div className="flex items-start gap-2">
+                    <HiMail className="w-4 h-4 mt-0.5 text-gray-600" />
+                    <div>
+                        {emails.map((email, index) => (
+                            <div key={index}>
+                                <a 
+                                    href={`mailto:${email}`} 
+                                    className="text-blue-600 hover:underline break-all"
+                                >
+                                    {email}
+                                </a>
+                                {index < emails.length - 1 && <br />}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {member.address && (
+                    <div className="flex items-start gap-2">
+                        <HiLocationMarker className="w-4 h-4 mt-0.5 text-gray-600" />
+                        <span>{member.address}</span>
+                    </div>
+                )}
+
+                {member.linkedin && (
+                    <div className="flex items-center gap-2">
+                        <FaLinkedin className="w-4 h-4 text-[#0077B5]" />
+                        <a 
+                            href={member.linkedin.startsWith('http') ? member.linkedin : `https://linkedin.com/in/${member.linkedin}`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                        >
+                            LinkedIn
+                        </a>
+                    </div>
+                )}
+
+                {member.twitter && (
+                    <div className="flex items-center gap-2">
+                        <FaXTwitter className="w-4 h-4 text-gray-900" />
+                        <a 
+                            href={`https://twitter.com/${member.twitter.replace('@', '')}`}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                        >
+                            {member.twitter.startsWith('@') ? member.twitter : `@${member.twitter}`}
+                        </a>
+                    </div>
+                )}
+            </div>
+
+            <div className="mt-4 text-gray-800 text-sm">
+                <h3 className="font-bold text-lg text-[#2B256E] uppercase mb-2">Profile:</h3>
+                <p className="whitespace-pre-line">{showFullProfile ? member.profile : shortProfile}</p>
+                <button 
+                    onClick={() => setShowFullProfile(!showFullProfile)}
+                    className="text-blue-600 hover:underline font-medium mt-2 focus:outline-none flex items-center gap-1"
+                >
+                    {showFullProfile ? (
+                        <>
+                            <span>Show Less</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                            </svg>
+                        </>
+                    ) : (
+                        <>
+                            <span>Show More</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </>
+                    )}
+                </button>
+            </div>
         </div>
-  
-        <div className="mt-4 space-y-2 text-gray-700 text-sm">
-          <p><span className="font-semibold">📞 PHONE:</span> {member.phone}</p>
-          <p><span className="font-semibold">📧 EMAIL:</span> <a href={`mailto:${member.email}`} className="text-blue-600 hover:underline">{member.email}</a></p>
-          <p><span className="font-semibold">📍 ADDRESS:</span> {member.address}</p>
-        </div>
-  
-        <div className="mt-4 text-gray-800 text-sm">
-          <h3 className="font-bold text-lg text-[#2B256E] uppercase">Profile:</h3>
-          <p>{showFullProfile ? member.profile : shortProfile}</p>
-          <button 
-            onClick={() => setShowFullProfile(!showFullProfile)}
-            className="text-blue-600 hover:underline font-medium mt-2"
-          >
-            {showFullProfile ? "Show Less" : "Show More"}
-          </button>
-        </div>
-      </div>
     );
-  }
+}
+
   
 export default Members;

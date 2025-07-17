@@ -1,165 +1,142 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+
+const initiatives = [
+  {
+    title: "1. First Ever International Intergenerational Forum on Mediation for Young Women",
+    description:
+      "An impactful global gathering focused on mediation and peacebuilding by and for young women.",
+    videoLink: "https://www.youtube.com/watch?v=fn_WfLihZtk",
+    bookletLink: {
+      name: "YOUNG WOMEN MEDIATION 2019 BOOKLET",
+      link: "https://drive.google.com/file/d/1eYUyPxsSZ13mobGE8dKpI2ZyHk1PYK6D/view",
+    },
+  },
+  {
+    title: "2. 2nd International Young Women Mediation Forum 2020",
+    description:
+      "A creative and empowering platform leveraging art for peace and dialogue.",
+    videoLink: "https://www.youtube.com/watch?v=tt075Xj2-m0",
+    bookletLink: {
+      name: "YOUNG WOMEN IN MEDIATION BOOKLET 2020",
+      link: "https://drive.google.com/file/d/1b7Nv7f9rqLFDmpVAKgdXBKiLcw5R2tlV/view",
+    },
+  },
+  {
+    title: "3. Young Women Mediation Forum",
+    description:
+      "Highlighting mentorship journeys and knowledge transfer across generations.",
+    videoLink: "https://www.youtube.com/watch?v=cqAlnW4asbY",
+  },
+  {
+    title: "4. Youth and Young Women Leaders Mediation and Regional Advocacy Initiatives (Kenya)",
+    description:
+      "A localized yet powerful engagement on intergenerational collaboration in peacebuilding.",
+    videoLink: "https://www.youtube.com/watch?v=A55ztnAUi9I",
+    bookletLink: {
+      name: "Youth and Young Women Leaders Mediation and Regional Advocacy",
+      link: "https://interculturalinnovation.org/international-centre-for-peace-human-rights-and-development-in-africa-iphrd-africa-youth-and-young-women-leaders-mediation-and-regional-advocacy-initiatives/",
+    },
+  },
+  {
+    title: "5. Mediation Mentorship Documentation",
+    description:
+      "A localized yet powerful engagement on intergenerational collaboration in peacebuilding.",
+    videoLink: "https://www.youtube.com/watch?v=lyfpztIzTDg&t=12s",
+    booklets: [
+      {
+        name: "Young Women Mediation Booklet",
+        link: "https://drive.google.com/file/d/1NspH-ABQNdlZ8fVdu4oR0arQPr7qNPjW/view",
+      },
+      {
+        name: "YOUNG WOMEN MEDIATION 2018 Booklet",
+        link: "https://drive.google.com/file/d/1IJLNUsWWD6sGUezhEU8v70Xh9eCMs903/view",
+      },
+      {
+        name: "Young Women Mediation Booklet",
+        link: "https://drive.google.com/file/d/1NspH-ABQNdlZ8fVdu4oR0arQPr7qNPjW/view",
+      },
+    ],
+  },
+];
+
+const convertToEmbedUrl = (url) => {
+  if (!url) return null;
+  const videoId = url.split("v=")[1];
+  if (!videoId) return null;
+  const ampersandPosition = videoId.indexOf("&");
+  const cleanVideoId =
+    ampersandPosition !== -1 ? videoId.substring(0, ampersandPosition) : videoId;
+  return `https://www.youtube.com/embed/${cleanVideoId}`;
+};
 
 const Initiatives = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10">
       <motion.div
-        className="max-w-6xl w-full bg-white shadow-lg rounded-3xl p-6 md:p-12 space-y-8 border border-gray-200"
+        className="max-w-4xl w-full bg-white shadow-lg rounded-3xl p-6 md:p-12 space-y-8 border border-gray-200"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        {/* Full Name of Organization */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Full Name of Organization
-          </h2>
-          <p className="text-gray-900 leading-relaxed text-sm md:text-lg">
-            International Centre for Peace, Human Rights and Development in Africa (IPHRD-Africa).
-          </p>
-        </motion.div>
+        <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
+          Key Initiatives for Young Women in Peacebuilding
+        </h2>
 
-        {/* Overview of Organization */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Overview of Organization
-          </h2>
-          <p className="text-gray-900 leading-relaxed text-sm md:text-lg">
-            IPHRD-Africa is a Non-Governmental Organization (NGO) registered and based in Nairobi, Kenya, with a local, national, and international status to operate in Africa. 
-            It is involved in policy support on youth engagement in peace processes as well as building capacities for youth to effectively engage in peace processes. This aligns with the implementation of United Nations Security Council Resolutions (UNSCR) 2250 and 2419 on youth, peace, and security, as well as UNSCR 1325 on women, peace, and security, and African Union commitments on youth and women empowerment in peace and security.
-          </p>
-          <p className="text-gray-900 leading-relaxed text-sm md:text-lg mt-4">
-            The team at IPHRD-Africa is below 30 years.
-          </p>
-        </motion.div>
+        {initiatives.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300 space-y-4"
+          >
+            <h3 className="text-xl font-semibold text-[#2B256E]">{item.title}</h3>
+            <p className="text-gray-800 text-sm md:text-lg">{item.description}</p>
 
-        {/* Areas of Operation */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Areas of Operation
-          </h2>
-          <p className="text-gray-900 leading-relaxed text-sm md:text-lg">
-            IPHRD-Africa currently operates in the Great Lakes and Horn of Africa, building mediation capacity of young women leaders to effectively support track 1, 2, and 3 mediation efforts. 
-            Key focus countries include Kenya, Somalia, South Sudan, and Ethiopia, among others.
-          </p>
-        </motion.div>
+            {/* Single booklet with custom label */}
+            {item.bookletLink && !item.booklets && (
+              <a
+                href={item.bookletLink.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm md:text-base text-[#2B256E] bg-white border border-[#2B256E] rounded-full hover:bg-[#2B256E] hover:text-white transition duration-200"
+              >
+                <span>📘</span>
+                <span>{item.bookletLink.name}</span>
+              </a>
+            )}
 
-        {/* Key Areas of Focus/Programs */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Key Areas of Focus/Programs
-          </h2>
-          <div className="space-y-4">
-            {["Youth, Peace and Security - The role of youth in conflict prevention, dialogue, and mediation",
-              "Women, Peace and Security - The roles of young women in peace processes",
-              "Youth Leadership in Peace and Security",
-              "The inclusion of Persons with Disabilities (PWDs) in peace processes"].map((focus, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0" />
-                <p className="text-gray-900 text-sm md:text-lg">{focus}</p>
+            {/* Multiple booklets */}
+            {item.booklets && item.booklets.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {item.booklets.map((booklet, idx) => (
+                  <a
+                    key={idx}
+                    href={booklet.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm md:text-base text-[#2B256E] bg-white border border-[#2B256E] rounded-full hover:bg-[#2B256E] hover:text-white transition duration-200"
+                  >
+                    <span>📘</span>
+                    <span>{booklet.name}</span>
+                  </a>
+                ))}
               </div>
-            ))}
-          </div>
-        </motion.div>
+            )}
 
-        {/* Initiatives Undertaken by the Organization */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Initiatives Undertaken by the Organization
-          </h2>
-          <div className="space-y-4">
-            {["Negotiation and Mediation Training for young women leaders in Horn of Africa, Addis Ababa, Ethiopia, 10-15 June 2019",
-              "IPHRD-Africa participated at the African Union Eastern Africa Regional Consultation on the role and contributions of youth to peace and security in Africa; and Mediation Training, Asmara, Eritrea, 10-13 June 2019",
-              "Participated at the Validation Meeting on the Thematic Research on Impact of Devolution on Peacebuilding in Kenya held in Nairobi, Kenya, 29 March 2019",
-              "IPHRD-Africa participated at the First International Symposium on Youth Participation in Peace Processes held in Helsinki, Finland, 04-06 March 2019",
-              "IPHRD-Africa hosted the International Young Women Mediation Forum in partnership with GIZ from 29-31 January 2019 in Nairobi, Kenya",
-              "Participated at the IGAD - EU Peer-to-Peer Experience Sharing Workshop on Mediation organized by IGAD Mediation Support Unit, 24 - 25 January 2019, Kampala, Uganda",
-              "Participated at the Pre-Symposium Expert Group Meeting and Consultation: Youth Participation in Peace Processes held from 03-04 February 2019 in Doha, Qatar"].map((initiative, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0" />
-                <p className="text-gray-900 text-sm md:text-lg">{initiative}</p>
+            {/* Embedded YouTube video */}
+            {item.videoLink && (
+              <div className="mt-4 w-full aspect-video">
+                <iframe
+                  className="w-full h-full rounded-lg"
+                  src={convertToEmbedUrl(item.videoLink)}
+                  title={item.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-            ))}
+            )}
           </div>
-        </motion.div>
-
-        {/* Some Key Partners that the Organization Works/Has Worked With */}
-        <motion.div
-          className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-300"
-          whileHover={{ scale: 1.02 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4">
-            Some Key Partners that the Organization Works/Has Worked With
-          </h2>
-          <div className="space-y-4">
-            {[" IPHRD-Africa is an active member of the United Network of Young Peacebuilders. ",
-              "IPHRD-Africa has a strong partnership with Norwegian Church Aid (NCA) in 2018 on implementing a project on Building Mediation Capacity of young women leaders in the great lakes and Horn of Africa. ",
-              "IPHRD-Africa has a strong partnership with the Fellowship of Christian Councils and Churches in the Great Lakes and Horn of Africa (FECCLAHA) on implementing a project  on Building Mediation Capacity of young women leaders in the great lakes and Horn of Africa: MOU between IPHRD-Africa and FECCLAHA: 2018 to 2020. ",
-              " IPHRD-Africa in partnership with Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ) on International Young Women Mediation Forum, 2019.",
-              "IPHRD-Africa partnership with Clingendael Academy, The Hague, the Netherlands (2018 and 2019): Negotiation and Mediation Training for young women leaders in Horn of Africa. ",
-              "IPHRD-Africa partnership with Hon. Betty Bigombe, Mediator, and (July 2018-December 2018 and January 2019): Mediation Mentorship to the young women leaders during the Negotiation and Mediation training held in Addis Ababa, Ethiopia, 23-27 July 2018 and during the International Young Women Mediation Forum.",
-              "IPHRD-Africa partnership with Norwegian Centre for Conflict Resolution (NOREF) (July 2018): Mediation Mentorship to the young women leaders during the Negotiation and Mediation training held in Addis Ababa, Ethiopia, 23-27 July 2018 as well as the Intergenerational forum on mediation and young women led missions to support ongoing national dialogue in Kenya.",
-              "IPHRD-Africa partnership with Arigatou International, Kenya (2018): In identification of young women from the horn of Africa for the negotiation and mediation training. ",
-              " IPHRD-Africa partnership with the Africa Alliance of YMCAs (AAYMCA) (2018): In identification of young women leaders for the intergenerational forum on mediation. ",
-              "IPHRD-Africa partnership with Partnership with Kenya National Commission of Human Rights (KNCHR) and Independent Electoral and Boundaries Commission (IEBC) in 2017: Training and deployment of youth and PWDs as long term election observers in informal settlements to enable them observe elections as well as participate in conflict prevention and resolution before, during and after the 2017 general elections.",
-              " IPHRD-Africa partnership with University of Nairobi, Institute of Diplomacy and International Studies (IDIS), IDIS Forum of International Affairs (IFIA) (2017/2018): training students on negotiation, dialogue and mediation. "
-            ].map((initiative, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0" />
-                <p className="text-gray-900 text-sm md:text-lg">{initiative}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-        <div className="space-y-4">
-  {[
-    { label: "Name", value: "Felix Kiptoo" },
-    { label: "Position", value: "Programmes Coordinator, IPHRD-Africa" },
-    { label: "Address", value: "P.O. Box 18829-00100, Nairobi, Kenya" },
-    { label: "Email", value: "info@iphrdafrica.org; felix@iphrdafrica.org" },
-    { label: "Website", value: "www.iphrdafrica.org" },
-    { label: "Facebook", value: "https://www.facebook.com/IPHRDAFRICA/" },
-    { label: "Twitter", value: "@iphrdafrica" },
-    { label: "Instagram", value: "iphrdafrica" },
-    { label: "YouTube", value: "IPHRD-Africa" }
-  ].map((contact, index) => (
-    <div key={index} className="flex items-start space-x-3">
-      <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0" />
-      {contact.label === "Facebook" || contact.label === "Website" ? (
-        <a
-          href={contact.value}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-900 text-sm md:text-lg underline"
-        >
-          {contact.label}: {contact.value}
-        </a>
-      ) : (
-        <p className="text-gray-900 text-sm md:text-lg">
-          <strong>{contact.label}:</strong> {contact.value}
-        </p>
-      )}
-    </div>
-  ))}
-</div>
-
+        ))}
       </motion.div>
     </div>
   );

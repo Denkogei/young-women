@@ -59,7 +59,7 @@ function Home() {
       {/* Introduction Section */}
       <div className="p-6 md:p-8 max-w-5xl mx-auto mt-10">
         <h2 className="text-2xl md:text-3xl font-bold text-[#2B256E] mb-4 text-center">
-          About the Young Women Mediation Network
+          About Women, Youth  Peace and Security
         </h2>
         <p className="text-gray-900 leading-relaxed text-sm md:text-lg">
           Founded in 2017 by young women at IPHRD-Africa, the Network equips women with skills in peacebuilding, mediation, and conflict resolution. It advances UNSCR 1325, 2250, and 2419 on Women, Peace, and Security.
